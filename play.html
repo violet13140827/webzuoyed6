@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fashion PuYard</title>
+    <link rel="stylesheet" href="css/play.css">
+    <script type="text/javascript" src="js/Play.js"></script>
+    <!-- 禁止双击放大 -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"> -->
+</head>
+
+<body ontouchmove="return false" >
+    <div id="s1">
+        <!-- 衣架 -->
+        <img id="yijia" src="img/衣架.png">
+        <!--  绿色标题 -->
+        <img id="topframe" src="img/top/图标2.png">
+        <!-- 中间的衣服 -->
+        <img id="cclo" src="./img/衣服款式/a1.png">
+        <!-- next -->
+        <img id="nextbt" onclick="changebg1(this)" src="img/bt/上下页 (2).png">
+
+        <!-- <input type="button" value="点击我来选择款式" id="changetext1" onclick="ww()"> -->
+        <img src="./img/dialog/图标2.png" id="changetext1" onclick="ww()">
+        <!-- 下面的框 -->
+        <div id="selectframe">
+            <!-- 改变衣服的字 -->
+            
+            <ul id="maoxian">
+                <li id="l1"><img id="li1" class="xian" onclick="changem(this)"/></li>
+                <li id="l2"><img id="li2" class="xian" onclick="changem(this)" /></li>
+                <li id="l3"><img id="li3" class="xian" onclick="changem(this)" /></li>
+                <li id="l4"><img id="li4" class="xian" onclick="changem(this)"/></li>
+                <li id="l5"><img id="li5" class="xian" onclick="changem(this)" /></li>
+            </ul>
+        </div>
+    </div>
+    <a href="play.html" id="ocm"></a>
+    <!-- 装饰层加结果 -->
+    
+</body>

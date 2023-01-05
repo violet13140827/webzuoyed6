@@ -1,0 +1,2398 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #000
+}
+
+div {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+body,
+div,
+li,
+p,
+span {
+    font-family: Microsoft YaHei, Heiti SC, Arial
+}
+
+.btn {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer
+}
+
+body {
+    background: #acacac;
+    height: 100%
+}
+
+#root {
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 100%;
+    max-height: 1138px
+}
+
+#landscape-screen-tips {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none
+}
+
+body.landscape {
+    background: #363535
+}
+
+body.landscape #root {
+    display: none
+}
+
+body.landscape #landscape-screen-tips {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+body.landscape #landscape-screen-tips .icon {
+    display: block;
+    -webkit-animation: device-rotate-tips-ani 1.5s infinite;
+    animation: device-rotate-tips-ani 1.5s infinite;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAADaCAMAAABU68ovAAAAXVBMVEUAAAD29vb////x8fH////////x8fH5+fn29vby8vL////5+fn39/f6+vr////x8fH////////+/v7////09PT////x8fH39/f////////////////////x8fH///+WLTLGAAAAHXRSTlMAIpML+gb4ZhHWn1c2gvHBvq1uKJcC6k8b187lQ9yhhboAAAQYSURBVHja7d3blpowFIDhTUIAOchZDkre/zE7ycySrbUUpsRN2/1fzO18KzEqxEVgTiZNfgmmtxRc8iaR8HNe8x4BtjQePKayYCIoyBSgvNNE1AkNSHqZyLqk97EgUCCHBzZ5mkg7ScvIJuIyOyXBRFxgpqWZyGsAZLB1KjsJi8nutHU4JCRbFRH8tmirI9k8Jx2sqNs8K/m0LQkrktO2crgcgXGB4AiTEsB0hJfo9MGgX7CGcYiYwQxmMOOvZwRhBG8tCoMXjBDeXvWCEcHbi14wgCBmMIMZzGAGM5jxETNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxY6E2rUQxnH2tz9cirlJFwFBJedaPnUv0M7++egPDE8iAJcIDmxwH5wwv9vUviw2kLbVO3TJU5uul/EyB0FoLp4x60PdGUd3qPurrWyjGGTc05u+1dcgI7/+tCCPARWGhH7o5Y7RCf+bH9ctXLp6v2BVDxfqz0oPXeSVaNtINo/1SXDv4dck8IIkbhtC2ol+iouEonTBCbYvVMnXOjxww6s/RFrBUpXHh/gw1rHj5d/qhYn9Gpk2FWh6xRBRX5Oj3Znh2Sq49/L6+y8pB26q9GbE2dbA2mVbx6I+7MfBglLCttm73ZQi7AD3iL4HqjFYJHSPRppqaUaJ3ATpGa+ckpGak2hRRMyqjGMkvl+xyFeSMwjAqcsZgGDdyhl0oNTnDN4yenJGZFGxNChP5/Y3efh6SM2rDOJMzboYxkDMqwyjIGcIw6F+io2FU1IxIm1JqRmgXSkvNKNCXeTpGrU0JNSO2c6LIGPgCS8AuDHz9ta0SXWDtxoDRH+MqlbC2Dt2G2JFRadtQZt2qq/orGowdGb2euxYiqWEpVWhTBnszoNAPdStuQwxqf0aocdWKW4Z+DfszIh8pxJqbuCE4YAC+4bm0evtipjpgJHeFnyyt1Ku2xa0bhjxr27p75rECNwyI9ZwvXkHq+7aTaMEV44YYy/spfgjgjNHaWW+GeUhGEX7tLlVinIFDDSgnOwhi1V6bU0b6tVS9eAERe863g4dRrtiHdc6o+nn5vtyVVgR79Cqt4uL6gfHPQyGqtP2vf7HADGbcYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JjhtOM+J/AgT008yDMkN/dPP9hzS8zAMQN3OEYeekp5YU7KOKXwVXqiY+QS7smcinGKABWdiBgpPJTSMHJ4KidhhPBUSMLw4CmPhKHgKUXCkHsygum71ftNSgCX6bsl8FQyfbcL5EdYsDk0R3j7aiA5wpt5AjKg/2gLJEBD/0Hf2OOf/vRrj6z/7GtP4B3nMKyjHA12kIPSjnJs3FEO0TvKkYJHOWCR+rjJH0Vn6fI5PjNbAAAAAElFTkSuQmCC);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 109px
+}
+
+body.landscape #landscape-screen-tips .desc {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px
+}
+
+@-webkit-keyframes device-rotate-tips-ani {
+    0% {
+        opacity: 1;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    45%,
+    98% {
+        opacity: 1;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+
+    99%,
+    to {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes device-rotate-tips-ani {
+    0% {
+        opacity: 1;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    45%,
+    98% {
+        opacity: 1;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+
+    99%,
+    to {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@media screen and (-webkit-device-pixel-ratio:3) and (device-width:375px) and (device-height:812px) {
+
+    .art-author-detail.iphoneX,
+    .page-menu.iphoneX-menu {
+        border-left: 48px solid #000
+    }
+
+    .art-author-detail.iphoneX {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+    }
+}
+
+@-webkit-keyframes flash_ani {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes flash_ani {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fadeIn_ani {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn_ani {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes tips_ani {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    50% {
+        -webkit-transform: translate(20px, 20px);
+        transform: translate(20px, 20px)
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+
+@keyframes tips_ani {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    50% {
+        -webkit-transform: translate(20px, 20px);
+        transform: translate(20px, 20px)
+    }
+
+    to {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+
+@-webkit-keyframes tiny_scale_btn_ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes tiny_scale_btn_ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+#root {
+    position: absolute;
+    font-size: 16px;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden
+}
+
+#root .page-enter {
+    opacity: 1;
+    -webkit-transform: scale(.9) translateX(0);
+    -ms-transform: scale(.9) translateX(0);
+    transform: scale(.9) translateX(0)
+}
+
+#root .page-enter-active {
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(0);
+    -ms-transform: scale(1) translateX(0);
+    transform: scale(1) translateX(0);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+#root .page-exit {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+#root .page-exit-active {
+    opacity: .01;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out
+}
+
+#root .btn-music {
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    right: 10px;
+    background: url(https://game.elloworld.cn/jingdong/static/media/btn-music.c80bbd62.png) no-repeat 50%;
+    -webkit-animation: app-music-ani .5s infinite linear;
+    animation: app-music-ani .5s infinite linear;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s
+}
+
+#root .btn-music.off {
+    background: url(https://game.elloworld.cn/jingdong/static/media/btn-music-off.d4f6a768.png) no-repeat 50%;
+    -webkit-animation: none;
+    animation: none
+}
+
+@-webkit-keyframes app-music-ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    to {
+        -webkit-transform: scale(.95);
+        transform: scale(.95)
+    }
+}
+
+@keyframes app-music-ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    to {
+        -webkit-transform: scale(.95);
+        transform: scale(.95)
+    }
+}
+
+.loading-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 100%;
+    background: #6e7375
+}
+
+.loading-page.exit {
+    -webkit-animation: loading_page_exit_ani .5s both;
+    animation: loading_page_exit_ani .5s both
+}
+
+.loading-page .bg,
+.loading-page .loading-bg-lights {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0 auto
+}
+
+.loading-page .loading-bg-lights {
+    -webkit-animation: loading-bg-lights-ani 1s ease-in-out alternate infinite;
+    animation: loading-bg-lights-ani 1s ease-in-out alternate infinite
+}
+
+.loading-page .logo {
+    position: absolute;
+    left: 10px;
+    top: 10px
+}
+
+.loading-page .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 190px
+}
+
+.loading-page .title.step1,
+.loading-page .title.step2 {
+    background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips.c4451dbd.png) no-repeat;
+    -webkit-animation: slideInDown_ani1 .5s;
+    animation: slideInDown_ani1 .5s
+}
+
+.loading-page .title.step1 .text,
+.loading-page .title.step2 .text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 176px;
+    -webkit-animation: tiny-fade-ani .1s ease-in-out infinite both alternate;
+    animation: tiny-fade-ani .1s ease-in-out infinite both alternate
+}
+
+.loading-page .title.step1 .text:after,
+.loading-page .title.step2 .text:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 176px;
+    background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips_text0.28feb799.png) no-repeat;
+    -webkit-animation: arrived_tips_text_ani 11s steps(1) both;
+    animation: arrived_tips_text_ani 11s steps(1) both
+}
+
+.loading-page .title.step3 {
+    background: url(https://game.elloworld.cn/jingdong/static/media/sex-select-title.0b6e7ff7.png) no-repeat 50%;
+    -webkit-animation: slideInDown_ani2 .5s;
+    animation: slideInDown_ani2 .5s
+}
+
+.loading-page .gate-door {
+    position: absolute;
+    left: 129px;
+    top: 574px
+}
+
+.loading-page .gate {
+    position: absolute;
+    left: 0;
+    top: 551px
+}
+
+.loading-page .ad-board {
+    position: absolute;
+    left: 0;
+    top: 62px
+}
+
+.loading-page .opt-tips {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: opt-tips-ani 3s both;
+    animation: opt-tips-ani 3s both
+}
+
+.loading-page .opt-tips img {
+    position: absolute;
+    top: 280px;
+    left: -105px;
+    -webkit-animation: tiny-fade-in-right-ani .5s ease-out;
+    animation: tiny-fade-in-right-ani .5s ease-out
+}
+
+.loading-page .progress-bar {
+    position: absolute;
+    left: 152px;
+    top: 673px;
+    width: 320px;
+    height: 30px
+}
+
+.loading-page .progress-bar .percent {
+    color: #218c7a;
+    font-size: 21px
+}
+
+.loading-page .progress-bar .strip {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 5px solid #000;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    background: #656565
+}
+
+.loading-page .progress-bar .strip .strip-indicator {
+    background: url(https://game.elloworld.cn/jingdong/static/media/progress-indicator.31d52f82.png);
+    background-size: 126px 28px;
+    width: 50%;
+    height: 20px
+}
+
+.loading-page .hint {
+    position: absolute;
+    left: 233px;
+    top: 741px
+}
+
+@-webkit-keyframes slideInDown_ani1 {
+    0% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes slideInDown_ani1 {
+    0% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes slideInDown_ani2 {
+    0% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes slideInDown_ani2 {
+    0% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes arrived_tips_text_ani {
+    0% {
+        background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips_text0.28feb799.png) no-repeat
+    }
+
+    40% {
+        background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips_text1.35d137e6.png) no-repeat
+    }
+
+    58% {
+        background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips_text2.fb2fe200.png) no-repeat
+    }
+
+    76%,
+    to {
+        background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips_text3.c3e9e9e8.png) no-repeat
+    }
+}
+
+@keyframes arrived_tips_text_ani {
+    0% {
+        background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips_text0.28feb799.png) no-repeat
+    }
+
+    40% {
+        background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips_text1.35d137e6.png) no-repeat
+    }
+
+    58% {
+        background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips_text2.fb2fe200.png) no-repeat
+    }
+
+    76%,
+    to {
+        background: url(https://game.elloworld.cn/jingdong/static/media/arrived_tips_text3.c3e9e9e8.png) no-repeat
+    }
+}
+
+@-webkit-keyframes loading_page_exit_ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+}
+
+@keyframes loading_page_exit_ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+}
+
+@-webkit-keyframes loading-bg-lights-ani {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes loading-bg-lights-ani {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes tiny-fade-ani {
+    0% {
+        opacity: .9
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes tiny-fade-ani {
+    0% {
+        opacity: .9
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes tiny-fade-in-right-ani {
+    0% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px);
+        opacity: 0
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes tiny-fade-in-right-ani {
+    0% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px);
+        opacity: 0
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes opt-tips-ani {
+    0% {
+        opacity: 0
+    }
+
+    20%,
+    80% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes opt-tips-ani {
+    0% {
+        opacity: 0
+    }
+
+    20%,
+    80% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+.webuploader-container {
+    position: relative;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s
+}
+
+.webuploader-container:active {
+    -webkit-transform: scale(.95);
+    -ms-transform: scale(.95);
+    transform: scale(.95)
+}
+
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px)
+}
+
+.webuploader-pick {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    overflow: hidden
+}
+
+.webuploader-pick-disable {
+    opacity: .6;
+    pointer-events: none
+}
+
+.game-page {
+    font-size: .3rem;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    -webkit-animation: fadeIn_ani 1s;
+    animation: fadeIn_ani 1s;
+    z-index: 2
+}
+
+.game-page,
+.game-page .title {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.game-page .title {
+    -webkit-animation: slideInDown_ani .5s;
+    animation: slideInDown_ani .5s
+}
+
+.game-page .bottom-bar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    bottom: 0;
+    background: #acacac;
+    border-top: 4px solid #ccc
+}
+
+.game-page .btn-make-back {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom: 50px
+}
+
+.game-page .btn-make-ok {
+    cursor: pointer;
+    position: absolute;
+    width: 169px;
+    height: 73px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    background: url(https://game.elloworld.cn/jingdong/static/media/btn_ok_disable.89ab94a0.png);
+    right: 0;
+    bottom: 44px
+}
+
+.game-page .btn-make-ok.ok {
+    background: url(https://game.elloworld.cn/jingdong/static/media/btn_ok.3fb31681.png)
+}
+
+.game-page .cursor_arrow {
+    position: absolute;
+    left: 460px;
+    top: 210px;
+    z-index: 2;
+    -webkit-animation: cursor_arrow_ani .5s infinite ease-in alternate;
+    animation: cursor_arrow_ani .5s infinite ease-in alternate
+}
+
+.game-page .btn_back {
+    cursor: pointer;
+    position: absolute;
+    left: 25pxpx;
+    top: 28pxpx;
+    width: 74pxpx;
+    height: 123pxpx
+}
+
+@-webkit-keyframes cursor_arrow_ani {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    to {
+        -webkit-transform: translate(-10px, -10px);
+        transform: translate(-10px, -10px)
+    }
+}
+
+@keyframes cursor_arrow_ani {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    to {
+        -webkit-transform: translate(-10px, -10px);
+        transform: translate(-10px, -10px)
+    }
+}
+
+.tab-content {
+    left: 25px;
+    top: 200px;
+    width: 144px;
+    height: 611px;
+    background: url(https://game.elloworld.cn/jingdong/static/media/list_bg.167ac0a1.png) no-repeat;
+    -webkit-animation: slideInLeft_ani .5s;
+    animation: slideInLeft_ani .5s
+}
+
+.tab-content,
+.tab-content .type-icon {
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.tab-content .type-icon {
+    left: 0;
+    top: 0;
+    width: 145px;
+    height: 120px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.tab-content .swiper-container {
+    position: absolute;
+    left: 11px;
+    top: 134px;
+    width: 129px;
+    height: 447px;
+    overflow: hidden
+}
+
+.tab-content .swiper-container .swiper-wrapper .swiper-slide {
+    width: 106px;
+    height: 106px;
+    text-align: center;
+    cursor: pointer
+}
+
+.tab-content .swiper-container .swiper-wrapper .swiper-slide img {
+    height: 106px;
+    max-width: 100%
+}
+
+.tab-content .swiper-container .swiper-wrapper .swiper-slide:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 10px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -15px;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 40px 40px 0 0
+}
+
+.tab-content .swiper-container .swiper-wrapper .swiper-slide:active {
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9)
+}
+
+.tab-content .swiper-container .swiper-scrollbar {
+    background: transparent;
+    width: 15px;
+    padding: 10px 0;
+    height: 409px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.tab-content .swiper-container .swiper-scrollbar .swiper-scrollbar-drag {
+    background: #b7afb7;
+    border-radius: 0;
+    border-top: 2px solid #faf3f3;
+    border-left: 1px solid #faf3f3;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333
+}
+
+.tab-content .btn-prev {
+    position: absolute;
+    left: 10pxpx;
+    top: 40pxpx;
+    width: 50pxpx;
+    height: 50pxpx
+}
+
+.tab-content .btn-prev.swiper-button-disabled {
+    opacity: .5
+}
+
+.tab-content .btn-next {
+    position: absolute;
+    top: 40pxpx;
+    width: 50pxpx;
+    height: 50pxpx;
+    right: 10px
+}
+
+.tab-content .btn-next.swiper-button-disabled {
+    opacity: .5
+}
+
+@-webkit-keyframes slideInLeft_ani {
+    0% {
+        -webkit-transform: translateX(-150px);
+        transform: translateX(-150px)
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInLeft_ani {
+    0% {
+        -webkit-transform: translateX(-150px);
+        transform: translateX(-150px)
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+.game-tab {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1
+}
+
+.game-tab li {
+    width: 110px;
+    height: 100px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0
+}
+
+.game-tab li.active {
+    border: 1px dashed #000;
+    background: rgba(0, 255, 222, .47)
+}
+
+.game-tab li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    background: #fff;
+    width: 80%;
+    height: 25px;
+    border: 1px dashed #000
+}
+
+.game-tab li img {
+    z-index: 1;
+    position: absolute;
+    left: 15px;
+    bottom: 6px
+}
+
+.game-tab li:first-child {
+    position: absolute;
+    left: 378px;
+    top: 168px;
+    -webkit-animation: tab-item-show-ani .5s both;
+    animation: tab-item-show-ani .5s both
+}
+
+.game-tab li:nth-child(2) {
+    position: absolute;
+    left: 458px;
+    top: 281px;
+    -webkit-animation: tab-item-show-ani .5s .2s both;
+    animation: tab-item-show-ani .5s .2s both
+}
+
+.game-tab li:nth-child(3) {
+    position: absolute;
+    left: 488px;
+    top: 385px;
+    -webkit-animation: tab-item-show-ani .5s .4s both;
+    animation: tab-item-show-ani .5s .4s both
+}
+
+.game-tab li:nth-child(4) {
+    position: absolute;
+    left: 499px;
+    top: 520px;
+    -webkit-animation: tab-item-show-ani .5s .6s both;
+    animation: tab-item-show-ani .5s .6s both
+}
+
+.game-tab li:nth-child(5) {
+    position: absolute;
+    left: 472px;
+    top: 656px;
+    -webkit-animation: tab-item-show-ani .5s .8s both;
+    animation: tab-item-show-ani .5s .8s both
+}
+
+.game-tab li:nth-child(6) {
+    position: absolute;
+    left: 418px;
+    top: 771px;
+    -webkit-animation: tab-item-show-ani .5s 1s both;
+    animation: tab-item-show-ani .5s 1s both
+}
+
+@-webkit-keyframes tab-item-show-ani {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes tab-item-show-ani {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.game-scene,
+.game-scene .game-canvas,
+.game-scene .people-effect-canvas {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.game-scene .game-canvas {
+    opacity: 0;
+    -webkit-animation: game-canvas-enter-ani 1s .6s both ease-in;
+    animation: game-canvas-enter-ani 1s .6s both ease-in
+}
+
+@-webkit-keyframes game-canvas-enter-ani {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes game-canvas-enter-ani {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+.name-input-dialog {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 999;
+    -webkit-animation: fadeIn_ani .5s;
+    animation: fadeIn_ani .5s
+}
+
+.name-input-dialog .name-bg {
+    position: absolute;
+    left: 120px;
+    top: 343px;
+    width: 393px;
+    height: 132px
+}
+
+.name-input-dialog .name-input {
+    position: absolute;
+    left: 210px;
+    top: 394px;
+    width: 205px;
+    height: 60px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 30px;
+    text-align: center;
+    background: transparent;
+    border: 0
+}
+
+.name-input-dialog .name-input::-webkit-input-placeholder {
+    font-size: 22px
+}
+
+.name-input-dialog .name-input:-ms-input-placeholder,
+.name-input-dialog .name-input::-ms-input-placeholder {
+    font-size: 22px
+}
+
+.name-input-dialog .name-input::placeholder {
+    font-size: 22px
+}
+
+.name-input-dialog .name-btn-ok {
+    position: absolute;
+    left: 251px;
+    top: 509px;
+    width: 118px;
+    height: 66px
+}
+
+.name-input-dialog .name-btn-close {
+    position: absolute;
+    left: 461px;
+    top: 339px;
+    width: 50px;
+    height: 50px
+}
+
+.select-train-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-animation: page-enter-ani .5s;
+    animation: page-enter-ani .5s
+}
+
+.select-train-page .trains-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 205px;
+    z-index: 1;
+    -webkit-animation: slideInDown_ani .5s;
+    animation: slideInDown_ani .5s
+}
+
+.select-train-page .trains-btn-left {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 257px;
+    height: 160px;
+    -webkit-animation: btn_left_ani .5s ease-in alternate infinite;
+    animation: btn_left_ani .5s ease-in alternate infinite;
+    z-index: 1
+}
+
+.select-train-page .trains-btn-left.swiper-button-disabled {
+    -webkit-animation: none;
+    animation: none;
+    opacity: .5
+}
+
+.select-train-page .trains-btn-right {
+    position: absolute;
+    top: 29px;
+    width: 245px;
+    height: 144px;
+    z-index: 1;
+    right: 0;
+    -webkit-animation: btn_right_ani .5s ease-in alternate infinite;
+    animation: btn_right_ani .5s ease-in alternate infinite
+}
+
+.select-train-page .trains-btn-right.swiper-button-disabled {
+    -webkit-animation: none;
+    animation: none;
+    opacity: .5
+}
+
+.select-train-page .train-scenes {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 100%
+}
+
+.select-train-page .train-scenes .train-swiper {
+    width: 100%;
+    height: 100%
+}
+
+.select-train-page .train-scenes .train-scene-0,
+.select-train-page .train-scenes .train-scene-1,
+.select-train-page .train-scenes .train-scene-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 100%;
+    overflow: hidden
+}
+
+.select-train-page .train-scenes .train-scene-0 img,
+.select-train-page .train-scenes .train-scene-1 img,
+.select-train-page .train-scenes .train-scene-2 img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.select-train-page .train-scenes .train-scene-0 .bg,
+.select-train-page .train-scenes .train-scene-1 .bg,
+.select-train-page .train-scenes .train-scene-2 .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none
+}
+
+.select-train-page .train-scenes .train-scene-0 .bg.play,
+.select-train-page .train-scenes .train-scene-1 .bg.play,
+.select-train-page .train-scenes .train-scene-2 .bg.play {
+    display: block;
+    -webkit-animation: train-bg-loop-ani 2s linear infinite;
+    animation: train-bg-loop-ani 2s linear infinite
+}
+
+.select-train-page .train-scenes .train-scene-0 .people,
+.select-train-page .train-scenes .train-scene-0 .train,
+.select-train-page .train-scenes .train-scene-1 .people,
+.select-train-page .train-scenes .train-scene-1 .train,
+.select-train-page .train-scenes .train-scene-2 .people,
+.select-train-page .train-scenes .train-scene-2 .train {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 1138px
+}
+
+.select-train-page .train-scenes .train-scene-0 .bg {
+    background: url(https://game.elloworld.cn/jingdong/static/media/1_bg.71b881c4.png);
+    background-size: auto 100%;
+    width: 2543px;
+    height: 1138px
+}
+
+.select-train-page .train-scenes .train-scene-0 .handle0 {
+    position: absolute;
+    left: 60px;
+    top: 132px;
+    width: 150px;
+    height: 180px
+}
+
+.select-train-page .train-scenes .train-scene-0 .handle1 {
+    position: absolute;
+    left: 380px;
+    top: 132px;
+    width: 150px;
+    height: 180px
+}
+
+.select-train-page .train-scenes .train-scene-1 .bg {
+    background: url(https://game.elloworld.cn/jingdong/static/media/2_bg.5e48bc5c.png);
+    background-size: auto 100%;
+    width: 3138px;
+    height: 1138px
+}
+
+.select-train-page .train-scenes .train-scene-1 .handle0 {
+    position: absolute;
+    left: 68px;
+    top: 186px;
+    width: 150px;
+    height: 180px
+}
+
+.select-train-page .train-scenes .train-scene-1 .handle1 {
+    position: absolute;
+    left: 372px;
+    top: 186px;
+    width: 150px;
+    height: 180px
+}
+
+.select-train-page .train-scenes .train-scene-2 .bg {
+    background: url(https://game.elloworld.cn/jingdong/static/media/3_bg.c191d1df.png);
+    background-size: auto 100%;
+    width: 2652px;
+    height: 1138px
+}
+
+.select-train-page .train-scenes .train-scene-2 .people2 {
+    position: absolute;
+    left: 440px;
+    top: 500px;
+    width: 210px;
+    height: 576px
+}
+
+.select-train-page .train-scenes .train-scene-2 .handle0 {
+    position: absolute;
+    left: -65px;
+    top: 158px;
+    width: 150px;
+    height: 180px
+}
+
+.select-train-page .train-scenes .train-scene-2 .handle1 {
+    position: absolute;
+    left: 490px;
+    top: 158px;
+    width: 150px;
+    height: 180px
+}
+
+.select-train-page .trains-btn-ok {
+    position: absolute;
+    left: 243px;
+    top: 877px;
+    width: 152px;
+    height: 61px;
+    z-index: 1;
+    -webkit-animation: tiny_scale_btn_ani 1s ease-in-out infinite;
+    animation: tiny_scale_btn_ani 1s ease-in-out infinite
+}
+
+.select-train-page .arrow {
+    position: absolute;
+    left: 375px;
+    top: 918px;
+    -webkit-animation: tips_ani infinite 1s linear;
+    animation: tips_ani infinite 1s linear;
+    z-index: 3
+}
+
+@-webkit-keyframes slideInDown_ani {
+    0% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes slideInDown_ani {
+    0% {
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes btn_left_ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+}
+
+@keyframes btn_left_ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+}
+
+@-webkit-keyframes btn_right_ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+
+@keyframes btn_right_ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+
+@-webkit-keyframes train-bg-loop-ani {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-60%);
+        transform: translateX(-60%)
+    }
+
+    20% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: translateX(-30%);
+        transform: translateX(-30%)
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+@keyframes train-bg-loop-ani {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-60%);
+        transform: translateX(-60%)
+    }
+
+    20% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 1;
+        -webkit-transform: translateX(-30%);
+        transform: translateX(-30%)
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+@-webkit-keyframes page-enter-ani {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes page-enter-ani {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.sex-select-control {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.sex-select-control .sex-select-title {
+    position: absolute;
+    left: 181px;
+    top: 0;
+    width: 392px;
+    height: 157px
+}
+
+.sex-select-control .p-girl {
+    position: absolute;
+    left: 175px;
+    top: 275px;
+    width: 185px;
+    height: 579px;
+    -webkit-filter: brightness(.6);
+    filter: brightness(.6);
+    z-index: 1;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-animation: people_enter_ani .6s both;
+    animation: people_enter_ani .6s both
+}
+
+.sex-select-control .p-girl.active {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    z-index: 2
+}
+
+.sex-select-control .p-girl.exit {
+    -webkit-animation: people_exit_ani .5s both;
+    animation: people_exit_ani .5s both
+}
+
+.sex-select-control .p-boy {
+    position: absolute;
+    left: 285px;
+    top: 275px;
+    width: 183px;
+    height: 575px;
+    -webkit-filter: brightness(.6);
+    filter: brightness(.6);
+    z-index: 1;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-animation: people_enter_ani .5s both;
+    animation: people_enter_ani .5s both
+}
+
+.sex-select-control .p-boy.active {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    z-index: 2
+}
+
+.sex-select-control .p-boy.exit {
+    -webkit-animation: people_exit_ani .5s both;
+    animation: people_exit_ani .5s both
+}
+
+.sex-select-control .btn-girl {
+    position: absolute;
+    left: 0;
+    top: 624px;
+    width: 149px;
+    height: 193px;
+    -webkit-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    transform: translateX(-200px);
+    -webkit-animation: girl_select_enter_ani .5s .5s both;
+    animation: girl_select_enter_ani .5s .5s both
+}
+
+.sex-select-control .btn-boy {
+    position: absolute;
+    left: 501px;
+    top: 624px;
+    width: 140px;
+    height: 193px;
+    -webkit-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
+    -webkit-animation: boy_select_enter_ani .5s .5s both;
+    animation: boy_select_enter_ani .5s .5s both
+}
+
+.sex-select-control .checked {
+    position: absolute;
+    left: -100px;
+    top: 723px;
+    width: 62px;
+    height: 58px
+}
+
+.sex-select-control .checked.boy {
+    left: 485px
+}
+
+.sex-select-control .checked.girl {
+    left: 81px
+}
+
+.sex-select-control .btn-ok {
+    position: absolute;
+    left: 255px;
+    top: 859px;
+    width: 150px;
+    height: 84px;
+    z-index: 3
+}
+
+.sex-select-control .arrow {
+    position: absolute;
+    left: 375px;
+    top: 918px;
+    -webkit-animation: tips_ani infinite 1s linear;
+    animation: tips_ani infinite 1s linear;
+    z-index: 3
+}
+
+@-webkit-keyframes people_enter_ani {
+    0% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes people_enter_ani {
+    0% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes people_exit_ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+
+    to {
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        opacity: 0
+    }
+}
+
+@keyframes people_exit_ani {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+
+    to {
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes boy_select_enter_ani {
+    0% {
+        -webkit-transform: translateX(200px);
+        transform: translateX(200px)
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+@keyframes boy_select_enter_ani {
+    0% {
+        -webkit-transform: translateX(200px);
+        transform: translateX(200px)
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+@-webkit-keyframes girl_select_enter_ani {
+    0% {
+        -webkit-transform: translateX(-200px);
+        transform: translateX(-200px)
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+@keyframes girl_select_enter_ani {
+    0% {
+        -webkit-transform: translateX(-200px);
+        transform: translateX(-200px)
+    }
+
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+.train_control {
+    position: absolute;
+    left: 0;
+    top: 239px;
+    -webkit-animation: train_enter_ani 10s 1s ease-out both;
+    animation: train_enter_ani 10s 1s ease-out both
+}
+
+.train_control .train {
+    position: absolute;
+    left: 676px;
+    top: 0;
+    width: 2099px;
+    height: 593px
+}
+
+.train_control .train-left-door {
+    left: 2176px;
+    width: 258px;
+    -webkit-animation: train-left-door-ani 1s 14s both;
+    animation: train-left-door-ani 1s 14s both
+}
+
+.train_control .train-left-door,
+.train_control .train-right-door {
+    position: absolute;
+    top: 103px;
+    height: 481px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.train_control .train-right-door {
+    left: 2407px;
+    width: 257px;
+    -webkit-animation: train-right-door-ani 1s 14s both;
+    animation: train-right-door-ani 1s 14s both
+}
+
+.train_control .door-light {
+    position: absolute;
+    left: 2099px;
+    top: 580px;
+    width: 640px;
+    height: 293px;
+    -webkit-animation: door-open-light-ani 1s 14s both;
+    animation: door-open-light-ani 1s 14s both;
+    opacity: .5
+}
+
+.loading-page .gate-door.play {
+    -webkit-animation: gate-door-open-ani 1s 3.2s both;
+    animation: gate-door-open-ani 1s 3.2s both
+}
+
+@-webkit-keyframes train_enter_ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(-2099px);
+        transform: translateX(-2099px)
+    }
+}
+
+@keyframes train_enter_ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(-2099px);
+        transform: translateX(-2099px)
+    }
+}
+
+@-webkit-keyframes train-left-door-ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(-150px);
+        transform: translateX(-150px)
+    }
+}
+
+@keyframes train-left-door-ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(-150px);
+        transform: translateX(-150px)
+    }
+}
+
+@-webkit-keyframes train-right-door-ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(150px);
+        transform: translateX(150px)
+    }
+}
+
+@keyframes train-right-door-ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(150px);
+        transform: translateX(150px)
+    }
+}
+
+@-webkit-keyframes door-open-light-ani {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
+
+@keyframes door-open-light-ani {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
+
+@-webkit-keyframes gate-door-open-ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(-500px);
+        transform: translateX(-500px)
+    }
+}
+
+@keyframes gate-door-open-ani {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(-500px);
+        transform: translateX(-500px)
+    }
+}
+
+.result-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background: #fff
+}
+
+.result-page .app-gen-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    -webkit-animation: fadeIn_ani 1s;
+    animation: fadeIn_ani 1s
+}
+
+.result-page .btn-replay {
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    width: 102px;
+    height: 94px
+}
+
+.result-page .long-press-tips {
+    position: absolute;
+    left: 232px;
+    top: 25px;
+    width: 192px;
+    height: 42px;
+    pointer-events: none;
+    -webkit-animation: long-press-tips_ani .6s infinite ease-in-out alternate;
+    animation: long-press-tips_ani .6s infinite ease-in-out alternate
+}
+
+.result-page .share-tips {
+    position: absolute;
+    top: -60px;
+    width: 67px;
+    height: 134px;
+    right: 20px;
+    -webkit-animation: share-tips_ani 1s infinite ease-in-out alternate;
+    animation: share-tips_ani 1s infinite ease-in-out alternate
+}
+
+.result-page .share-text {
+    position: absolute;
+    top: 82px;
+    width: 102px;
+    height: 27px;
+    right: 10px
+}
+
+@-webkit-keyframes suggest-panel-ani {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes suggest-panel-ani {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px)
+    }
+
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes long-press-tips_ani {
+    0% {
+        opacity: .5;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+}
+
+@keyframes long-press-tips_ani {
+    0% {
+        opacity: .5;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px)
+    }
+}
+
+@-webkit-keyframes share-tips_ani {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    to {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+}
+
+@keyframes share-tips_ani {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    to {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+}
+
+.scan-page {
+    text-align: center
+}
+
+.scan-page .scene {
+    position: absolute;
+    left: 25px;
+    top: 66px;
+    width: 700px;
+    height: auto
+}
+
+.scan-page .scan-border {
+    position: absolute;
+    left: 33px;
+    top: 45px;
+    width: 689px;
+    height: auto
+}
+
+.scan-page .scan-line-panel {
+    position: absolute;
+    left: 33px;
+    top: 45px;
+    width: 689px;
+    height: 1035px;
+    overflow: hidden;
+    border-radius: 210px
+}
+
+.scan-page .scan-line-panel .scan-line {
+    position: absolute;
+    left: 35px;
+    top: 0;
+    width: 622px;
+    height: auto;
+    -webkit-animation: scan-line-ani 1s linear infinite;
+    animation: scan-line-ani 1s linear infinite
+}
+
+.scan-page .tips {
+    position: absolute;
+    left: 220px;
+    top: 460px;
+    width: 307px;
+    height: auto;
+    -webkit-animation: scan-tips-ani .5s infinite linear alternate;
+    animation: scan-tips-ani .5s infinite linear alternate
+}
+
+.scan-page .progress {
+    position: absolute;
+    left: 180px;
+    top: 830px;
+    width: auto;
+    height: 200px
+}
+
+.scan-page .progress .bar {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid #3290fa;
+    width: 30px;
+    height: 0;
+    position: absolute;
+    bottom: 70px;
+    left: 12px;
+    padding: 3px
+}
+
+.scan-page .progress .bar:after {
+    content: "";
+    position: relative;
+    display: block;
+    background: #3ff9a0;
+    height: 100%
+}
+
+.scan-page .progress .text {
+    position: absolute;
+    bottom: 0;
+    background: url(https://game.elloworld.cn/jingdong/static/media/texts.0e6d4ced.png) no-repeat;
+    background-size: auto 36px;
+    width: 58px;
+    height: 36px
+}
+
+.scan-page .progress.p1 {
+    left: 180px
+}
+
+.scan-page .progress.p1 .bar {
+    -webkit-animation: progress_bar1_ani .5s linear both;
+    animation: progress_bar1_ani .5s linear both
+}
+
+.scan-page .progress.p2 {
+    left: 260px
+}
+
+.scan-page .progress.p2 .text {
+    background-position: -75px 0
+}
+
+.scan-page .progress.p2 .bar {
+    -webkit-animation: progress_bar2_ani .5s .5s linear both;
+    animation: progress_bar2_ani .5s .5s linear both
+}
+
+.scan-page .progress.p3 {
+    left: 340px
+}
+
+.scan-page .progress.p3 .text {
+    background-position: -153px 0
+}
+
+.scan-page .progress.p3 .bar {
+    -webkit-animation: progress_bar3_ani .5s 1s linear both;
+    animation: progress_bar3_ani .5s 1s linear both
+}
+
+.scan-page .progress.p4 {
+    left: 420px
+}
+
+.scan-page .progress.p4 .text {
+    background-position: -240px 0
+}
+
+.scan-page .progress.p4 .bar {
+    -webkit-animation: progress_bar4_ani .5s 1.5s linear both;
+    animation: progress_bar4_ani .5s 1.5s linear both
+}
+
+.scan-page .progress.p5 {
+    left: 500px
+}
+
+.scan-page .progress.p5 .text {
+    background-position: -310px 0;
+    width: 80px
+}
+
+.scan-page .progress.p5 .bar {
+    left: 25px;
+    -webkit-animation: progress_bar5_ani .5s 2s linear both;
+    animation: progress_bar5_ani .5s 2s linear both
+}
+
+@-webkit-keyframes scan-tips-ani {
+    0% {
+        opacity: .2;
+        -webkit-transform: scale(.92);
+        transform: scale(.92)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes scan-tips-ani {
+    0% {
+        opacity: .2;
+        -webkit-transform: scale(.92);
+        transform: scale(.92)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes scan-line-ani {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px)
+    }
+
+    to {
+        -webkit-transform: translateY(-600px);
+        transform: translateY(-600px)
+    }
+}
+
+@keyframes scan-line-ani {
+    0% {
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px)
+    }
+
+    to {
+        -webkit-transform: translateY(-600px);
+        transform: translateY(-600px)
+    }
+}
+
+@-webkit-keyframes progress_bar1_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 235px
+    }
+}
+
+@keyframes progress_bar1_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 235px
+    }
+}
+
+@-webkit-keyframes progress_bar2_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 220px
+    }
+}
+
+@keyframes progress_bar2_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 220px
+    }
+}
+
+@-webkit-keyframes progress_bar3_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 270px
+    }
+}
+
+@keyframes progress_bar3_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 270px
+    }
+}
+
+@-webkit-keyframes progress_bar4_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 220px
+    }
+}
+
+@keyframes progress_bar4_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 220px
+    }
+}
+
+@-webkit-keyframes progress_bar5_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 260px
+    }
+}
+
+@keyframes progress_bar5_ani {
+    0% {
+        height: 0
+    }
+
+    to {
+        height: 260px
+    }
+}

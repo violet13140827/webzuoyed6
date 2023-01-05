@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #72d6bf;
+    height: 100%;
+    width: 100%;
+
+    background-image: url(../img/mainga.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: 100%;
+}
+#cho{
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    height: 100%;
+}
+@keyframes dias{
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes startbt{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.bts{
+    animation: startbt 3s ease 2s;
+    animation-fill-mode:forwards;
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    width: 20%;
+    opacity: 0;
+}
+#startbt{
+    animation: startbt 3s ease 2s;
+    animation-fill-mode:forwards;
+    position: absolute;
+    bottom: 20%;
+    left: 65%;
+    width: 20%;
+    opacity: 0;
+}

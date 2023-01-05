@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fashion PuYard</title>
+    <style>
+        body {
+            background: url("./img/0首页.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .bt0 {
+            position: absolute;
+            left: 280px;
+            top: 1359px;
+            animation: mymove 5s infinite;
+            -webkit-animation: mymove 5s infinite;
+        }
+
+        @keyframes mymove {
+            50% {
+
+                transform: translateY(100px);
+            }
+        }
+
+        @-webkit-keyframes mymove {
+            50% {
+
+                transform: translateY(100px);
+
+            }
+        }
+    </style>
+</head>
+
+<body ontouchmove="return false">
+    <div class="bt0">
+        <a href="choose.html">
+            <img src="img/0bt.png" width="500px">
+        </a>
+    </div>
+</body>
